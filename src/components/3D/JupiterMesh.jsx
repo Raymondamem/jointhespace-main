@@ -5,7 +5,7 @@ import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import jupitermap from "/images/jupitermap.jpg";
 
-export default function JupiterMesh() {
+export default function JupiterMesh({ onClick }) {
     const myMesh = React.useRef()
     const colorMap = useLoader(TextureLoader, jupitermap)
     useFrame(() => {
@@ -14,6 +14,7 @@ export default function JupiterMesh() {
 
     return (
         <Sphere ref={myMesh}
+            onClick={(event) => onClick(event, "Jupiter")}
             rotation={[Math.PI / 1.1, -3, -3]}
             visible args={[0.5, 32, 32]}
             scale={0.7}

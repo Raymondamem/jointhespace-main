@@ -5,7 +5,7 @@ import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import marsmap1k from "/images/marsmap1k.jpg";
 
-export default function MarsMesh() {
+export default function MarsMesh({ onClick }) {
     const myMesh = React.useRef()
     const colorMap = useLoader(TextureLoader, marsmap1k)
     useFrame(() => {
@@ -14,6 +14,7 @@ export default function MarsMesh() {
 
     return (
         <Sphere ref={myMesh}
+            onClick={(event) => onClick(event, "Mars")}
             rotation={[Math.PI / 1.1, -3, -3]}
             visible args={[0.5, 32, 32]} scale={1.01}
             position={[3.9, 1.28, 1]}>

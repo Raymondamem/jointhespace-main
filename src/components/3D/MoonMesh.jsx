@@ -5,7 +5,7 @@ import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import moonmap1k from "/images/moonmap1k.jpg";
 
-export default function MoonMesh() {
+export default function MoonMesh({ onClick }) {
     const myMesh = React.useRef()
     const colorMap = useLoader(TextureLoader, moonmap1k)
     useFrame(() => {
@@ -14,6 +14,7 @@ export default function MoonMesh() {
 
     return (
         <Sphere ref={myMesh}
+            onClick={(event) => onClick(event, "Moon")}
             rotation={[Math.PI / 1.5, -3, -3]}
             visible args={[0.5, 32, 32]} scale={1.6}
             position={[2, -1.4, 1]}>

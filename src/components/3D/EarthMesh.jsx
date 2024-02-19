@@ -5,7 +5,7 @@ import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import earthmap1k from "/images/earthmap1k.jpg";
 
-export default function EarthMesh() {
+export default function EarthMesh({ onClick }) {
     const myMesh = React.useRef()
     const colorMap = useLoader(TextureLoader, earthmap1k)
     useFrame(() => {
@@ -14,7 +14,7 @@ export default function EarthMesh() {
 
     return (
         <Sphere ref={myMesh}
-            onClick={() => alert(433)}
+            onClick={(event) => onClick(event, "Earth")}
             rotation={[Math.PI / 1.1, -3, -3]}
             visible args={[0.5, 32, 32]} scale={2.5}
             position={[-3, -0.1, 1]}>
