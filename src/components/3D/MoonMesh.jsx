@@ -15,9 +15,9 @@ export default function MoonMesh({ onClick }) {
     return (
         <Sphere ref={myMesh}
             onClick={(event) => onClick(event, "Moon")}
-            rotation={[Math.PI / 1.5, -3, -3]}
+            rotation={[Math.PI / 1.3, -3, -3]}
             visible args={[0.5, 32, 32]} scale={1.6}
-            position={[2, -1.4, 1]}>
+            position={[3.3, 0.5, 0.6]}>
             <sphereGeometry attach="material" />
             <meshStandardMaterial
                 map={colorMap}

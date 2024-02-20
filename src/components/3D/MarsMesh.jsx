@@ -15,9 +15,9 @@ export default function MarsMesh({ onClick }) {
     return (
         <Sphere ref={myMesh}
             onClick={(event) => onClick(event, "Mars")}
-            rotation={[Math.PI / 1.1, -3, -3]}
+            rotation={[Math.PI / 1.3, -3, -3]}
             visible args={[0.5, 32, 32]} scale={1.01}
-            position={[3.9, 1.28, 1]}>
+            position={[3.4, 2.2, -1.5]}>
             <sphereGeometry attach="material" />
             <meshStandardMaterial
                 map={colorMap}

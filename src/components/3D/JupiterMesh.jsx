@@ -15,10 +15,10 @@ export default function JupiterMesh({ onClick }) {
     return (
         <Sphere ref={myMesh}
             onClick={(event) => onClick(event, "Jupiter")}
-            rotation={[Math.PI / 1.1, -3, -3]}
+            rotation={[Math.PI / 1.3, -3, -3]}
             visible args={[0.5, 32, 32]}
             scale={0.7}
-            position={[2, 2, 1]}>
+            position={[1.2, 2.3, -1.5]}>
             <sphereGeometry attach="material" />
             <meshStandardMaterial
                 map={colorMap}

@@ -15,9 +15,9 @@ export default function EarthMesh({ onClick }) {
     return (
         <Sphere ref={myMesh}
             onClick={(event) => onClick(event, "Earth")}
-            rotation={[Math.PI / 1.1, -3, -3]}
+            rotation={[Math.PI / 1.3, -3, -3]}
             visible args={[0.5, 32, 32]} scale={2.5}
-            position={[-3, -0.1, 1]}>
+            position={[-2.5, -0.1, 3]}>
             <sphereGeometry attach="material" />
             <meshStandardMaterial
                 map={colorMap}
