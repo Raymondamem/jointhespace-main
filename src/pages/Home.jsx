@@ -9,6 +9,7 @@ import { Canvas, events } from "@react-three/fiber";
 import '../assets/styles/style.css';
 import { PerspectiveCamera } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
+// import StarsMesh from '../components/3D/StarsMesh';
 
 export const Home = () => {
   const [jobref, setJobref] = useState("Galaxy")
@@ -74,6 +75,7 @@ export const Home = () => {
           enablePan={false} />
         <ambientLight intensity={1} />
         <directionalLight intensity={10} position={[-2, 1, 1]} />
+        {/* <StarsMesh /> */}
         <Suspense fallback={null}>
           <EarthMesh onClick={(event) => handleEarthClick(event, "Earth")} />
           <MoonMesh onClick={(event) => handleEarthClick(event, "Moon")} />
